@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compare 2 strings</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("Please input text");
+    let str2 = prompt("Please input text again");
+    let arr1 = str1.split(" ");
+    let arr2 = str2.split(" ");
+    if (arr1.length === arr2.length) {
+        let result = true;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === arr2[i]) {
+                i++;
+                result = true;
+            } else {
+                result = false;
+            }
+        }
+        if (result === true) {
+            alert("OK");
+        } else {
+            alert("Please try again!");
+        }
+    } else {
+        alert("Please try again!");
+    }
+</script>
+</body>
+</html>
